@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 
 export default function Pokedex() {
 
-    const [id , setId] = useState(1)
+    const [id , setId] = useState(494)
     const [pokemon, setPokemon] = useState(null)
 
     const fecthData = async () => {
@@ -32,14 +32,18 @@ export default function Pokedex() {
         <div>
             { pokemon && (
                 <div className="pokemon">
-                    <h1>Pokemon</h1>
-                    <p>{pokemon.id}</p>
-                    <p>{pokemon.name}</p>
-                    <p>Peso: {pokemon.weight}</p>
-                    <img src={pokemon.sprites.front_default} alt="" />
+                    <section>
+                        <h1>Pokemon</h1>
+                        <p>{pokemon.id}</p>
+                        <p>{pokemon.name}</p>
+                        <p>Peso: {pokemon.weight}</p>
+                        <img src={pokemon.sprites.front_default} alt="" />
 
-                    <button onClick={previousPokemon}>Anterior</button>
-                    <button onClick={nextPokemon}>Próximo</button>
+                        <div>
+                            <button onClick={previousPokemon}>Anterior</button>
+                            <button onClick={nextPokemon}>Próximo</button>
+                        </div>
+                    </section>
                 </div>
             )
 

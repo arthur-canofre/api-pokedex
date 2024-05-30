@@ -2,3 +2,64 @@
   margin: 0;
   padding: 0;
 }
+
+.pokemon{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.pokemon section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgb(234, 62, 97);;
+  width: 170px;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.pokemon div{
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pokemon button{
+  border-radius: 30px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  *{
+    background-color: rgb(234, 62, 97);
+  }
+
+  .pokemon h1{
+    font-size: 50px;
+  }
+
+  .pokemon p{
+    font-size: 30px;
+  }
+
+  .pokemon img{
+    width: auto;
+    height: 400px;
+  }
+
+  .pokemon section{
+    border-width: 0;
+  }
+  .pokemon div{
+    width: 380px;
+  }
+  .pokemon button{
+    height: 50px;
+    font-size: 30px;
+  }
+}
